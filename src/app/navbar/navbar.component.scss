@@ -1,0 +1,27 @@
+$cor-base: #ffd9e1;
+$cor-secundaria: #c82b77;
+
+
+
+.title {
+  flex: 1;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: $cor-base; 
+  color: $cor-secundaria;
+}
+  
+a.mat-button {
+  color: white;
+}
+a.active-link {
+  font-weight: bold;
+  border-bottom: 2px solid white; 
+}
