@@ -1,12 +1,13 @@
-$cor-base: #ffd9e1;
-$cor-secundaria: #c82b77;
-
-
+$cor-base: #ffd9e1; // Cor de fundo do toolbar
+$cor-secundaria: #c82b77; // Cor secundária
+$cor-hover: darken($cor-secundaria, 10%); // Cor de hover para botões e links
+$cor-ativo: lighten($cor-secundaria, 10%); // Cor para o estado ativo
 
 .title {
   flex: 1;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.8rem; // Tamanho de fonte aumentado
+  text-transform: uppercase; // Texto em maiúsculas para destacar
 }
 
 .spacer {
@@ -14,14 +15,50 @@ $cor-secundaria: #c82b77;
 }
 
 mat-toolbar {
-  background-color: $cor-base; 
+  background-color: $cor-base;
   color: $cor-secundaria;
-}
-  
-a.mat-button {
-  color: white;
-}
-a.active-link {
-  font-weight: bold;
-  border-bottom: 2px solid white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Adiciona uma sombra suave na toolbar
+  padding: 0 2rem; // Adiciona espaçamento lateral
+
+  a.mat-button, button.mat-button {
+    color: $cor-secundaria;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0.5rem; // Espaçamento entre links
+    transition: color 0.3s ease, background-color 0.3s ease; // Animação de transição suave
+
+    &:hover {
+      color: $cor-hover; // Cor de hover
+      background-color: lighten($cor-base, 10%); // Fundo leve no hover
+      border-radius: 4px; // Arredonda os cantos
+    }
+  }
+
+  .active-link {
+    font-weight: bold;
+    border-bottom: 2px solid $cor-secundaria; // Borda inferior destacada para o link ativo
+    color: $cor-ativo;
+  }
+
+  button[mat-icon-button] {
+    margin-right: 1rem; // Espaçamento à direita do botão de menu
+    color: $cor-secundaria;
+
+    &:hover {
+      color: $cor-hover;
+    }
+  }
+
+  // Menu dropdown styling
+  mat-menu {
+    button.mat-menu-item {
+      color: $cor-secundaria;
+      text-transform: capitalize;
+      
+      &:hover {
+        background-color: lighten($cor-base, 15%);
+        color: $cor-hover;
+      }
+    }
+  }
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
+import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -12,15 +13,13 @@ import { MatListModule } from '@angular/material/list';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ReceitasComponent } from './receitas/receitas.component';
-import { SobreComponent } from './sobre/sobre.component';
-import { ContatoComponent } from './contato/contato.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
+import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'receitas', component: ReceitasComponent },
-  { path: 'sobre', component: SobreComponent },
-  { path: 'contato', component: ContatoComponent },
+  { path: 'receitas', component: ReceitasComponent }
 ];
 
 @NgModule({
@@ -29,8 +28,8 @@ const routes: Routes = [
     NavbarComponent,
     HomeComponent,
     ReceitasComponent,
-    SobreComponent,
-    ContatoComponent,
+    FooterComponent,
+    RecipeCardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +39,7 @@ const routes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatMenuModule,
     RouterModule.forRoot(routes)
   ],
   providers: [
