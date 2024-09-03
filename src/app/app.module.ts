@@ -15,7 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { ReceitasComponent } from './receitas/receitas.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
-import { RecipeCardComponent } from './recipe-card/recipe-card.component';
+import { MatCardModule } from '@angular/material/card';
+import { CardsComponent } from './cards/cards.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,7 +30,7 @@ const routes: Routes = [
     HomeComponent,
     ReceitasComponent,
     FooterComponent,
-    RecipeCardComponent
+    CardsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +41,7 @@ const routes: Routes = [
     MatIconModule,
     MatListModule,
     MatMenuModule,
+    MatCardModule,
     RouterModule.forRoot(routes)
   ],
   providers: [

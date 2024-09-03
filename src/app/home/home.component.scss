@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: 60vh; // Altura do banner
-    background: url(../../../public/img/Img\ Home.jpg) no-repeat center center; // Substitua pelo caminho da sua imagem
+    background: url(../../../public/img/ImgHome.jpg) no-repeat center center; // Substitua pelo caminho da sua imagem
     background-size: cover; // A imagem cobre todo o banner
     display: flex;
     align-items: center;
@@ -33,4 +33,3 @@
       }
     }
   }
-  
