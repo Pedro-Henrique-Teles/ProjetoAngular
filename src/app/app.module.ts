@@ -17,7 +17,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
 import { CardsComponent } from './cards/cards.component';
-import { DocesComponent } from './receitas/doces/doces.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,7 +31,6 @@ const routes: Routes = [
     ReceitasComponent,
     FooterComponent,
     CardsComponent,
-    DocesComponent
   ],
   imports: [
     BrowserModule,
